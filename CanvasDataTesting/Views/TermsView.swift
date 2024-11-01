@@ -18,6 +18,8 @@ struct TermsView: View {
     // UI Change Triggers
     @State private var refreshList = false
     @State private var isShowingAddTermSheet = false
+    @State private var showingSheet = false
+    @State private var token = "2~JGcTJFzKBaUDDwVcHMAAFuPy4ThYnhKWL72fCHAcMGZhYMmEyGLGUJnJkhNcU8zz"
     
     init() {
         //Use this if NavigationBarTitle is with Large Font
@@ -114,9 +116,13 @@ struct TermsView: View {
                 // Icon Image
                 ToolbarItem(placement: .topBarLeading) {
                     HStack(spacing: 15){
-                        Image("AppIconImageLight")
-                            .resizable()
-                            .frame(width: 30, height: 30)
+                        Button {
+                            showingSheet.toggle()
+                        } label: {
+                            Image("AppIconImageLight")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                        }
                         Text("Skram")
                             .font(.custom("Georgia-Bold", size: 28))
                     }
@@ -149,6 +155,23 @@ struct TermsView: View {
                         refreshList.toggle()  // Trigger a refresh
                     }
                 )
+            }
+            .sheet(isPresented: $showingSheet) {
+                VStack {
+                    Text("Enter your token")
+                        .font(.headline)
+                    
+                    TextField("Enter your token", text: $token)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    Button("Save") {
+                        viewModel.setToken(token: token)
+                        showingSheet = false
+                    }
+                    .padding()
+                }
+                .padding()
             }
         }
     }
@@ -242,14 +265,18 @@ extension TermsView {
     class ViewModel: ObservableObject {
         @Published var newTermID: String = ""
         @Published var newTermName: String = ""
-        let canvasAPI = CanvasAPI(token: "2~JGcTJFzKBaUDDwVcHMAAFuPy4ThYnhKWL72fCHAcMGZhYMmEyGLGUJnJkhNcU8zz")
+        var canvasAPI = CanvasAPI(token: "2~JGcTJFzKBaUDDwVcHMAAFuPy4ThYnhKWL72fCHAcMGZhYMmEyGLGUJnJkhNcU8zz")
+        
+        func setToken(token: String) {
+            canvasAPI.token = token
+        }
         
         func addNewTerm(modelContext: ModelContext) {
             guard let id = Int(newTermID) else {
                 print("Invalid ID")
                 return
             }
-            
+                        
             let newTerm = Term(
                 id: id,
                 name: newTermName.isEmpty ? "Unnamed Term" : newTermName,
