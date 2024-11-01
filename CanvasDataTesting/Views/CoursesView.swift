@@ -50,7 +50,7 @@ struct CoursesView: View {
         .fontDesign(.serif)
         .preferredColorScheme(.dark)
         .background(.ultraThinMaterial)
-        .navigationTitle("Courses")
+        .navigationTitle(term.name ?? "Courses")
         .toolbar {
             
             // Delete all the Courses

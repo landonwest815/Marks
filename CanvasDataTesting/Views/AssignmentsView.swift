@@ -48,7 +48,7 @@ struct AssignmentsView: View {
         .fontDesign(.serif)
         .preferredColorScheme(.dark)
         .background(.ultraThinMaterial)
-        .navigationTitle("Assignments")
+        .navigationTitle(group.name ?? "Assignments")
         .toolbar {
             
             // Delete all the assignments

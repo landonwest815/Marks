@@ -113,9 +113,13 @@ struct TermsView: View {
                 
                 // Icon Image
                 ToolbarItem(placement: .topBarLeading) {
-                    Image("AppIconImageLight")
-                        .resizable()
-                        .frame(width: 30, height: 30)
+                    HStack(spacing: 15){
+                        Image("AppIconImageLight")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("Skram")
+                            .font(.custom("Georgia-Bold", size: 28))
+                    }
                 }
                 
                 // Delete all the Terms
@@ -152,7 +156,7 @@ struct TermsView: View {
     func pullData() async {
         if let newCourses = try? await viewModel.fetchCourses() {
             for course in newCourses {
-                if true/*course.term?.id ?? 0 > 1390*/ {
+                if course.term?.id ?? 0 > 1000 {
                     
                     await viewModel.insertCourse(course: course, terms: terms, modelContext: modelContext)
                                         

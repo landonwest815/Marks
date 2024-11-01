@@ -51,7 +51,7 @@ struct AssignmentGroupsView: View {
         .fontDesign(.serif)
         .preferredColorScheme(.dark)
         .background(.ultraThinMaterial)
-        .navigationTitle("Assignment Groups")
+        .navigationTitle(course.name ?? "Assignment Groups")
         .toolbar {
             
             // Delete all the Groups
