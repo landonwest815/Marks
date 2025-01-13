@@ -19,7 +19,7 @@ struct TermsView: View {
     @State private var refreshList = false
     @State private var isShowingAddTermSheet = false
     @State private var showingSheet = false
-    @State private var token = "2~JGcTJFzKBaUDDwVcHMAAFuPy4ThYnhKWL72fCHAcMGZhYMmEyGLGUJnJkhNcU8zz"
+    @State private var token = ""
     
     init() {
         //Use this if NavigationBarTitle is with Large Font
