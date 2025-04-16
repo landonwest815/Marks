@@ -103,7 +103,6 @@ struct TermsView: View {
                 .id(refreshList)
                 .scrollContentBackground(.hidden)
                 .refreshable {
-                    print("test1")
                     await pullData()
                     //refreshList.toggle()
                 }
@@ -178,8 +177,6 @@ struct TermsView: View {
     }
     
     func pullData() async {
-        print("test2")
-
         if let newCourses = try? await viewModel.fetchCourses() {
             for course in newCourses {
                 if course.term?.id ?? 0 > 1000 {
@@ -268,7 +265,9 @@ extension TermsView {
     class ViewModel: ObservableObject {
         @Published var newTermID: String = ""
         @Published var newTermName: String = ""
-        var canvasAPI = CanvasAPI(token: "...")
+        
+        // Use the token from your config helper:
+        var canvasAPI = CanvasAPI(token: Config.apiKey)
         
         func setToken(token: String) {
             canvasAPI.token = token

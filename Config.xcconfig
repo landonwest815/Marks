@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  CanvasDataTesting
+//
+//  Created by Landon West on 4/16/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+API_KEY = 2~JGcTJFzKBaUDDwVcHMAAFuPy4ThYnhKWL72fCHAcMGZhYMmEyGLGUJnJkhNcU8zz

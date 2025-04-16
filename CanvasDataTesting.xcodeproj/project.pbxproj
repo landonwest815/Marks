@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		91D74CA02DB013EF00F689F3 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D74C9F2DB013EF00F689F3 /* Config.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		91D74C9F2DB013EF00F689F3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		91FD6FB92CD1B49700462773 /* CanvasDataTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasDataTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		91D74CA22DB014A800F689F3 /* Exceptions for "CanvasDataTesting" folder in "CanvasDataTesting" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 91FD6FB82CD1B49700462773 /* CanvasDataTesting */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		91FD6FBB2CD1B49700462773 /* CanvasDataTesting */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				91D74CA22DB014A800F689F3 /* Exceptions for "CanvasDataTesting" folder in "CanvasDataTesting" target */,
+			);
 			path = CanvasDataTesting;
 			sourceTree = "<group>";
 		};
@@ -32,6 +50,7 @@
 		91FD6FB02CD1B49700462773 = {
 			isa = PBXGroup;
 			children = (
+				91D74C9F2DB013EF00F689F3 /* Config.xcconfig */,
 				91FD6FBB2CD1B49700462773 /* CanvasDataTesting */,
 				91FD6FBA2CD1B49700462773 /* Products */,
 			);
@@ -109,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D74CA02DB013EF00F689F3 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +147,7 @@
 /* Begin XCBuildConfiguration section */
 		91FD6FC72CD1B49900462773 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91D74C9F2DB013EF00F689F3 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -190,6 +211,7 @@
 		};
 		91FD6FC82CD1B49900462773 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91D74C9F2DB013EF00F689F3 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -255,6 +277,7 @@
 				DEVELOPMENT_TEAM = 2T72RH75T5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CanvasDataTesting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +307,7 @@
 				DEVELOPMENT_TEAM = 2T72RH75T5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CanvasDataTesting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
