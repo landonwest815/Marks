@@ -27,7 +27,7 @@ class CanvasAPI {
     
     func fetchCourses() async throws -> [CourseDTO] {
         // Canvas API endpoint for listing courses
-        guard let url = URL(string: "https://slcc.instructure.com/api/v1/courses?include[]=term&per_page=50") else {
+        guard let url = URL(string: "https://utah.instructure.com/api/v1/courses?include[]=term&per_page=50") else {
             throw URLError(.badURL)
         }
         
