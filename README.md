@@ -2,7 +2,14 @@
 
 ## 📱 Overview
 
-Marks is a Swift-based iOS application designed to fetch and display student grades from the Canvas Learning Management System (LMS). By integrating with the Canvas API, I was able to figure out how to pull info and display it correctly from a real world API.
+Marks is a Swift-based iOS application designed to fetch and display student grades from the Canvas Learning Management System (LMS). By integrating with the Canvas API, I was able to figure out how to pull info and display it correctly from a real world API.  
+
+## 🖼️ Screenshots
+
+<p float="left">
+  <img src="./assets/terms.png" height="400"/>
+  <img src="./assets/term.png" height="400"/>
+</p>
 
 ## 🎯 Project Objectives
 
